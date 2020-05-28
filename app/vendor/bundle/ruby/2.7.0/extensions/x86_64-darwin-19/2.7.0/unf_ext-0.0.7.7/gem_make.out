@@ -1,0 +1,16 @@
+current directory: /Users/trouni/Code/rise-fetch-lambda/app/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+/Users/trouni/.rbenv/versions/2.7.0/bin/ruby -I /Users/trouni/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20200526-33692-13din45.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/trouni/Code/rise-fetch-lambda/app/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /Users/trouni/Code/rise-fetch-lambda/app/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.bundle
+
+current directory: /Users/trouni/Code/rise-fetch-lambda/app/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.7.7/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20200526-33692-gobz1t

@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Sample SAM Template for rise-fetch-lambda
+Globals:
+  Function:
+    Timeout: 60
+Resources:
+  FetchIgUsersFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: s3://kesseo-rise/7e57df0a0179a69bb3bf3ecb6e3f2898
+      Handler: app.lambda_handler
+      Runtime: ruby2.7
+      Events:
+        FetchIgUsers:
+          Type: Api
+          Properties:
+            Path: /fetch-users
+            Method: post
+Outputs:
+  FetchIgUsersApi:
+    Description: API Gateway endpoint URL for Prod stage for FetchIgUsers function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/fetch-users/
+  FetchIgUsersFunction:
+    Description: FetchIgUsers Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - FetchIgUsersFunction
+      - Arn
+  FetchIgUsersFunctionIamRole:
+    Description: Implicit IAM Role created for FetchIgUsers function
+    Value:
+      Fn::GetAtt:
+      - FetchIgUsersFunction
+      - Arn
